@@ -1,0 +1,30 @@
+[debug] [2024-02-20T07:14:18.017Z] ----------------------------------------------------------------------
+[debug] [2024-02-20T07:14:18.020Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\nitish Gautam\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js hosting:disable --project netflix
+[debug] [2024-02-20T07:14:18.020Z] CLI Version:   13.3.0
+[debug] [2024-02-20T07:14:18.020Z] Platform:      win32
+[debug] [2024-02-20T07:14:18.020Z] Node Version:  v20.9.0
+[debug] [2024-02-20T07:14:18.020Z] Time:          Tue Feb 20 2024 12:44:18 GMT+0530 (India Standard Time)
+[debug] [2024-02-20T07:14:18.020Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-20T07:14:18.081Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-20T07:14:18.082Z] > authorizing via signed-in user (nitishgautam710@gmail.com)
+[debug] [2024-02-20T07:14:18.082Z] [iam] checking project netflix for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-02-20T07:14:18.087Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix:testIamPermissions [none]
+[debug] [2024-02-20T07:14:18.087Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix:testIamPermissions x-goog-quota-user=projects/netflix
+[debug] [2024-02-20T07:14:18.087Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-02-20T07:14:20.443Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix:testIamPermissions 200
+[debug] [2024-02-20T07:14:20.443Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix:testIamPermissions {}
+[debug] [2024-02-20T07:14:20.443Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project netflix:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2024-02-20T07:14:20.444Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/netflix [none]
+[debug] [2024-02-20T07:14:21.093Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/netflix 403
+[debug] [2024-02-20T07:14:21.094Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/netflix {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-02-20T07:14:21.094Z] HTTP Error: 403, The caller does not have permission
+[debug] [2024-02-20T07:14:21.499Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\nitish Gautam\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\nitish Gautam\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:292:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project netflix. Please make sure the project exists and your account has permission to access it.
